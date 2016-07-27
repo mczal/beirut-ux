@@ -1,0 +1,26 @@
+{
+  "name": "beirut-ux",
+  "authors": [
+    "Fahrizal Septrianto <beirut-team>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "angular": "^1.5.8",
+    "angular-resource": "^1.5.8",
+    "angular-route": "^1.5.8",
+    "angular-ui": "^0.4.0",
+    "jquery": "^3.1.0"
+  }
+}
