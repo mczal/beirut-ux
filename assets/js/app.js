@@ -1,17 +1,20 @@
 var beirutApp = angular.module('beirutApp', [
     'ngRoute',
-    'naif.base64',
-    'sidekeekController'
+    'beirutController'
 ]);
 
 beirutApp.config(['$routeProvider',
     function($routeProvider){
         $routeProvider.
-      when('/home', {
-        'templateUrl': 'partials/home.html',
-        'controller': 'Imgbase64Controller'
+      when('/recruitment-center', {
+        'templateUrl': 'partials/candidatePositions.html',
+        'controller': 'CandidatePositionController'
+      }).
+      when('/jobs-management', {
+        'templateUrl': 'partials/positions.html',
+        'controller': 'PositionController'
       }).
       otherwise({
-        'redirectTo': '/home'
+        'redirectTo': '/recruitment-center'
       });
     }]);

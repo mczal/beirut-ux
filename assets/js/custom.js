@@ -1,6 +1,6 @@
 var nav = false;
 $('#container').click(function(){
-  console.log('clicked');
+  // console.log('clicked');
   if(nav === true){
     closeNav();
   }
@@ -18,4 +18,8 @@ function closeNav() {
     document.getElementById("main").style.marginLeft = "0";
     document.body.style.backgroundColor = "white";
     nav = false;
+}
+
+function changeTitleHeader(title){
+    $('#top-header').html(" &nbsp;"+title);
 }

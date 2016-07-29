@@ -1,0 +1,31 @@
+{
+  "requestId": "1",
+  "errorMessage": null,
+  "errorCode": null,
+  "success": true,
+  "content": [
+    {
+      "id": "asd",
+      "storeId": "1",
+      "createdDate": 1466010000000,
+      "createdBy": "1",
+      "updatedDate": 1466355600000,
+      "updatedBy": "1",
+      "title": "myTitle #1"
+    },
+    {
+      "id": "e97da893-8a8b-43d3-8a48-710634eba167",
+      "storeId": "1",
+      "createdDate": 1466043086000,
+      "createdBy": "1",
+      "updatedDate": 1466043086000,
+      "updatedBy": "1",
+      "title": "myTitle #2"
+    }
+  ],
+  "pageMetaData": {
+    "pageSize": 5,
+    "pageNumber": 5,
+    "totalRecords": 2
+  }
+}

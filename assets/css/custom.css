@@ -24,6 +24,25 @@
     color: #f1f1f1;
 }
 
+.left-button-nav{
+
+}
+
+.middle{
+  height:100%;
+}
+
+.middle-header-icon{
+  padding-top: 13px;
+  font-size: 17px;
+}
+
+.header{
+  height:45px;
+  text-align: center;
+  margin-left: -10px;
+}
+
 .closebtn {
     position: absolute;
     top: 0;
@@ -34,7 +53,7 @@
 
 #main {
     transition: margin-left .5s;
-    padding: 20px;
+    padding-left: 20px;
 }
 
 #footer{

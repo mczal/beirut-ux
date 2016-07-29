@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app='beirutApp'>
   <head>
     <meta charset="utf-8">
     <title></title>
@@ -12,131 +12,25 @@
 
     <div id="leftside-nav-bar">
       <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-      <a href="#">Recruitment Center</a>
-      <a href="#">Jobs Management</a>
+      <a href="#/recruitment-center" onclick="closeNav()">Recruitment Center</a>
+      <a href="#/jobs-management" onclick="closeNav()">Jobs Management</a>
     </div>
 
     <div id="main">
       <div class="row">
-        <div class="col-xs-1">
-          <span onclick="openNav()"><i class="glyphicon glyphicon-align-justify"></i></span>
-        </div>
-        <div class="col-xs-4">
-          <i class="glyphicon glyphicon-queen"></i> Recruitment Center
+        <div class="header">
+          <div class="col-xs-1 left-button-nav middle" onclick="openNav()">
+            <span class="middle-header-icon"><i class="middle-header-icon glyphicon glyphicon-align-justify"></i></span>
+          </div>
+          <div class="col-xs-4 middle">
+            <i class="glyphicon glyphicon-queen middle-header-icon"></i> <span class="middle-header-icon" id="top-header"> </span>
+          </div>
         </div>
       </div>
 
       <div class="row">
         <div id="container">
-          <div id="content">
-            im content
-
-            <!-- MOVE SECTION TO PARTIALS -->
-            <!-- Examples Positions -->
-            <div class="row">
-              <div class="col-md-6 col-sm-6">
-                <table class="table table-hover">
-                  <thead>
-                    <th>Job Type</th>
-                    <th>Job Title</th>
-                    <th>Status</th>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>Professional</td>
-                      <td>Sr. System Development Engineer</td>
-                      <td><button type="button" class="btn btn-success">OPEN</button></td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-              <div class="col-md-6 col-sm-6">
-                <div class="subtitle row">
-                  Sr. System Development Engineer
-                </div>
-                <div class="job-info row">
-                  DETAIL INFORMATION
-                </div>
-                <div class="job-info-content row">
-                  <div class="col-md-3 col-sm-3">
-                    Job ID
-                  </div>
-                  <div class="col-md-4 col-sm-4">
-                    : 0102043
-                  </div>
-                </div>
-                <div class="job-info-content row">
-                  <div class="col-md-3 col-sm-3">
-                    Job Type
-                  </div>
-                  <div class="col-md-4 col-sm-4">
-                    : Professional
-                  </div>
-                </div>
-                <div class="job-info-content row">
-                  <div class="col-md-3 col-sm-3">
-                    Job Division
-                  </div>
-                  <div class="col-md-4 col-sm-4">
-                    : Engineer
-                  </div>
-                </div>
-                <!--  -->
-                <div class="job-info row">
-                  STATUS ISSUE
-                </div>
-                <div class="job-info-content row">
-                  <div class="col-md-3 col-sm-3">
-                    Status
-                  </div>
-                  <div class="col-md-4 col-sm-4">
-                    : <button type="button" name="button" class="btn btn-success">OPEN</button>
-                  </div>
-                </div>
-                <div class="job-info-content row">
-                  <div class="col-md-3 col-sm-3">
-                    Create Date
-                  </div>
-                  <div class="col-md-4 col-sm-4">
-                    : 5 Maret 2016
-                  </div>
-                </div>
-                <div class="job-info-content row">
-                  <div class="col-md-3 col-sm-3">
-                    Update Date
-                  </div>
-                  <div class="col-md-4 col-sm-4">
-                    : 10 Maret 2016
-                  </div>
-                </div>
-                <!--  -->
-                <div class="job-info row">
-                  DESCRIPTION
-                </div>
-                <div class="job-info-content row">
-                  <div class="col-md-3 col-sm-3">
-                    Description :
-                  </div>
-                  <div class="col-md-4 col-sm-4">
-                    <p>
-                      psum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet
-                    </p>
-                  </div>
-                </div>
-                <div class="job-info-content row">
-                  <div class="col-md-3 col-sm-3">
-                    Qualification :
-                  </div>
-                  <div class="col-md-4 col-sm-4">
-                    <p>
-                      psum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet
-                    </p>
-                  </div>
-                </div>
-
-              </div>
-            </div>
-          </div>
+          <div id="content" ng-view></div>
           <div class="row">
             <div id="footer">
               Copyright &copy; 2016 PT. Global Digital Niaga.
@@ -148,10 +42,11 @@
     </div>
 
   </body>
-
   <script src="bower_components/jquery/dist/jquery.min.js"></script>
   <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
   <script src="bower_components/angular/angular.js"></script>
 	<script src="bower_components/angular-route/angular-route.js"></script>
   <script src="assets/js/custom.js"></script>
+  <script src="assets/js/app.js"></script>
+  <script src="assets/js/controller.js"></script>
 </html>
