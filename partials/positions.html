@@ -7,17 +7,19 @@
         <th>Status</th>
       </thead>
       <tbody>
-        <tr>
-          <td>Professional</td>
-          <td>Sr. System Development Engineer</td>
+        <tr ng-repeat="position in positionsContent" ng-click="clickPosition(position.itr)">
+          <!-- {{itr}} -->
+          <td>{{position.type}}</td>
+          <td>{{position.title}}</td>
           <td><button type="button" class="btn btn-success">OPEN</button></td>
         </tr>
       </tbody>
     </table>
   </div>
-  <div class="col-md-6 col-sm-6">
+  <div ng-if="activeData" class="col-md-6 col-sm-6">
     <div class="subtitle row">
-      Sr. System Development Engineer
+      <!-- Sr. System Development Engineer -->
+      {{activeData.title}}
     </div>
     <div class="job-info row">
       DETAIL INFORMATION
@@ -27,7 +29,7 @@
         Job ID
       </div>
       <div class="col-md-4 col-sm-4">
-        : 0102043
+        : {{activeData.id}}
       </div>
     </div>
     <div class="job-info-content row">
@@ -35,7 +37,7 @@
         Job Type
       </div>
       <div class="col-md-4 col-sm-4">
-        : Professional
+        : {{activeData.type}}
       </div>
     </div>
     <div class="job-info-content row">
@@ -43,7 +45,7 @@
         Job Division
       </div>
       <div class="col-md-4 col-sm-4">
-        : Engineer
+        : {{activeData.division}}
       </div>
     </div>
     <!--  -->
@@ -63,7 +65,7 @@
         Create Date
       </div>
       <div class="col-md-4 col-sm-4">
-        : 5 Maret 2016
+        : {{activeData.createdDate}}
       </div>
     </div>
     <div class="job-info-content row">
@@ -71,7 +73,7 @@
         Update Date
       </div>
       <div class="col-md-4 col-sm-4">
-        : 10 Maret 2016
+        : {{activeData.updatedDate}}
       </div>
     </div>
     <!--  -->
@@ -84,7 +86,7 @@
       </div>
       <div class="col-md-4 col-sm-4">
         <p>
-          psum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet
+          {{activeData.description}}
         </p>
       </div>
     </div>
@@ -94,10 +96,9 @@
       </div>
       <div class="col-md-4 col-sm-4">
         <p>
-          psum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet
+          {{activeData.qualification}}
         </p>
       </div>
     </div>
-
   </div>
 </div>
