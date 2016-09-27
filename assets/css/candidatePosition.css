@@ -1,0 +1,64 @@
+.searchTitleBox{
+	padding-top:20px;
+	width:60%;
+	float:left;
+	padding-bottom:20px;
+	padding-left:30%;
+}
+
+.position-summary{
+  float:none;
+  padding-left: 10%;
+}
+
+.table-jobs{
+  float:none;
+  width:90%;	
+  padding-left: 10%;
+  display:inline-table;
+}
+
+.searchName{
+	width:80%;
+	height:33px;
+}
+
+.asearch{
+	color:#0594d8;
+	width:40%;
+	float:right;
+	padding-top:25px;
+	padding-bottom:20px;
+}
+
+.btn-job-title{
+	background-color:#0594d8;
+	margin-left:-10px;
+	color:white;
+}
+
+.btn-down{
+	background-color:transparent;
+}
+
+.tipePekerjaan{
+	border:1px green solid;
+	float:left;
+	padding-left:10%;
+}
+
+table{
+	width:80%;
+	height:80%;	
+	border-style:none;
+}
+
+td{
+	width:20%;
+}
+
+#dropDown{
+	width:70%;
+	height:90%;
+}
+

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html ng-app='beirutApp'>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/font-awesome-4.6.3/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/custom.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/position.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/candidatePosition.css">
+  </head>
+  <body>
+
+    <div id="leftside-nav-bar">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <div id="menu-left-side"><a href="#/recruitment-center" onclick="closeNav()">Recruitment Center</a></div>
+      <div id="menu-left-side"><a href="#/jobs-management" onclick="closeNav()">Jobs Management</a></div>
+    </div>
+
+    <div id="main">
+      <div class="row">
+        <div class="header">
+          <div class="col-xs-1 left-button-nav middle" onclick="openNav()">
+            <span class="middle-header-icon"><i class="middle-header-icon glyphicon glyphicon-align-justify"></i>&nbsp;&nbsp;HUMAN RESOURCES</span>
+          </div>
+          <div class="col-xs-4 middle">
+            <i class="glyphicon glyphicon-queen middle-header-icon"></i> <span class="middle-header-icon" id="top-header"> </span>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div id="container">
+          <div id="content" ng-view></div>
+          <div class="row">
+            <div id="footer">
+              Copyright &copy; 2016 PT. Global Digital Niaga.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </body>
+  <script src="bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+  <script src="bower_components/angular/angular.js"></script>
+	<script src="bower_components/angular-route/angular-route.js"></script>
+  <script src="assets/js/customs/custom.js"></script>
+  <script src="assets/js/app.js"></script>
+  <script src="assets/js/controller.js"></script>
+  <script src="assets/js/customs/candidatePosition.js"></script>
+</html>

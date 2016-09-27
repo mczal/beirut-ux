@@ -1,5 +1,18 @@
 <div class="row">
-  <div class="col-md-6 col-sm-6">
+  <div class="search-jobs-summary">
+	 <div class="searchBox">
+      <form>
+        <input type="text" class="searchJobTitle" name="job-title" onKeyDown="if(event.keyCode == 13){ document.getElementById('btnSearch').click() }" ng-model="query" placeholder="Search Job Title"></input>
+        <button type="button" id="btnSearch" class="btn btn-search" ng-click="search()"><span class="glyphicon glyphicon-search"></span></button>
+        </input>
+      </form>
+	 </div>
+    <div class="insert">
+      <button type="button" class="btn btn-insert"><a href="insertNewPositions.html"><span class="glyphicon glyphicon-plus"> Add</span></a></button>
+    </div>
+ </div>
+<hr class="garis">
+  <div class="col-md-6 col-sm-6 jobs-summary">
     <table class="table table-hover">
       <thead>
         <th>Job Type</th>
@@ -7,98 +20,13 @@
         <th>Status</th>
       </thead>
       <tbody>
-        <tr ng-repeat="position in positionsContent" ng-click="clickPosition(position.itr)">
+        <tr ng-repeat="position in positions" ng-click="clickPosition(position.itr)">
           <!-- {{itr}} -->
-          <td>{{position.type}}</td>
+          <td>{{position.jobType}}</td>
           <td>{{position.title}}</td>
-          <td><button type="button" class="btn btn-success">OPEN</button></td>
+          <td><a href="updatePosition?id={{position.id}}"><button type="button" class="btn btn-success">Open</button></a></td>
         </tr>
       </tbody>
     </table>
-  </div>
-  <div ng-if="activeData" class="col-md-6 col-sm-6">
-    <div class="subtitle row">
-      <!-- Sr. System Development Engineer -->
-      {{activeData.title}}
-    </div>
-    <div class="job-info row">
-      DETAIL INFORMATION
-    </div>
-    <div class="job-info-content row">
-      <div class="col-md-3 col-sm-3">
-        Job ID
-      </div>
-      <div class="col-md-4 col-sm-4">
-        : {{activeData.id}}
-      </div>
-    </div>
-    <div class="job-info-content row">
-      <div class="col-md-3 col-sm-3">
-        Job Type
-      </div>
-      <div class="col-md-4 col-sm-4">
-        : {{activeData.type}}
-      </div>
-    </div>
-    <div class="job-info-content row">
-      <div class="col-md-3 col-sm-3">
-        Job Division
-      </div>
-      <div class="col-md-4 col-sm-4">
-        : {{activeData.division}}
-      </div>
-    </div>
-    <!--  -->
-    <div class="job-info row">
-      STATUS ISSUE
-    </div>
-    <div class="job-info-content row">
-      <div class="col-md-3 col-sm-3">
-        Status
-      </div>
-      <div class="col-md-4 col-sm-4">
-        : <button type="button" name="button" class="btn btn-success">OPEN</button>
-      </div>
-    </div>
-    <div class="job-info-content row">
-      <div class="col-md-3 col-sm-3">
-        Create Date
-      </div>
-      <div class="col-md-4 col-sm-4">
-        : {{activeData.createdDate}}
-      </div>
-    </div>
-    <div class="job-info-content row">
-      <div class="col-md-3 col-sm-3">
-        Update Date
-      </div>
-      <div class="col-md-4 col-sm-4">
-        : {{activeData.updatedDate}}
-      </div>
-    </div>
-    <!--  -->
-    <div class="job-info row">
-      DESCRIPTION
-    </div>
-    <div class="job-info-content row">
-      <div class="col-md-3 col-sm-3">
-        Description :
-      </div>
-      <div class="col-md-4 col-sm-4">
-        <p>
-          {{activeData.description}}
-        </p>
-      </div>
-    </div>
-    <div class="job-info-content row">
-      <div class="col-md-3 col-sm-3">
-        Qualification :
-      </div>
-      <div class="col-md-4 col-sm-4">
-        <p>
-          {{activeData.qualification}}
-        </p>
-      </div>
-    </div>
   </div>
 </div>

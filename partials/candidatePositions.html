@@ -1,0 +1,79 @@
+
+<div class="row">
+  <div class="search-candidate-position-summary">
+      <div class="searchTitleBox">
+      <form method="post" action="">
+        <input type="text" class="searchName" name="job-title" placeholder="Search Name"></input>
+        <button type="button" class="btn btn-job-title"><span class="glyphicon glyphicon-search"></span></button>
+      </form>
+	 </div>
+	  <div class="asearch" >
+	    <button type="button" class="btn btn-down" onclick="ShowHide()">Advanced Search <span id="box" class="glyphicon glyphicon-chevron-up"></span></button>
+      </div>
+	  <div class="advancedSearch">
+	   <center><table>
+	    <tr>
+		 <td>
+			<form method="post" action="">
+				<select id="dropDown" name="jobType">
+				<option value="jobtype"> Job Type 1 </option>
+				<option value="jobtype"> Job Type 2 </option>
+				</select>
+			</form>
+		 </td>
+		 <td>
+			<form method="post" action="">
+				<select id="dropDown" name="jobTitle">
+				<option value="jobtitle"> Job Title 1 </option>
+				<option value="jobtitle"> Job Title 2 </option>
+				</select>
+			</form>
+		 </td>
+		 <td>
+			<form method="post" action="">
+				<select id="dropDown" name="status">
+				<option value="status"> Status 1 </option>
+				<option value="status"> Status 2 </option>
+				</select>
+			</form>
+		 </td>
+		 <td class="tanggal">
+			<form method="post" action="">
+				<input type="date" name="tanggalAwal">
+			</form>
+		 </td>
+		 <td class="tanggal">
+			<form method="post" action="">
+				<input type="date" name="tanggalAkhir">
+			</form>
+		 </td>
+		</tr>
+	   </table></center>
+	  </div>
+	  <br>
+  </div>
+
+  <div class="col-md-6 col-sm-6 table-jobs">
+    <table class="table table-hover">
+      <thead>
+        <th>Full Name</th>
+        <th>Applied Date</th>
+        <th>Job Type</th>
+        <th>Job Division</th>
+        <th>Job Title</th>
+        <th>Status</th>
+      </thead>
+      <tbody>
+        <tr ng-repeat="candidate in candidates" ng-click="clickCandidatePosition(candidatePosition.itr)">
+          <!-- {{itr}} -->
+          <td>{{candidate.firstName+" "+candidate.lastName}}</td>
+          <td>{{candidate.createdDate}}</td>
+          <td>{{candidate.types}}</td>
+          <td>{{candidate.divisions}}</td>
+          <td>{{candidate.title}}</td>
+          <td><a href="updateCandidatePosition?id={{candidatePosition.id}}">{{candidatePosition.status}}</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
